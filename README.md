@@ -23,8 +23,6 @@ Faisabilité et solutions
 ------------------------
 
 * Activation de l'exécution de scripts sur le poste client:
-<p> `set-executionpolicy -executionpolicy unrestricted -Force` </p>
-
 ```powershell
-write-host "toto"
+set-executionpolicy -executionpolicy unrestricted -Force
 ```
