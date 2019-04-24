@@ -8,13 +8,16 @@ Création d’un script qui installe le client BackupPC sur un poste Windows et 
 
 Le besoin
 ---------
-##### Au niveau client
+#### Au niveau client
 * Le script doit être en bat ou Powershell.
 * Installation automatique du client BackupPC.
 * Script compatible avec Windows 7, 8 et 10.
 * Affichage à la fin de la procédure d’un fichier d'information pour faciliter la configuration du serveur.
 * Affichage du nom netbios du poste.
 * Configuration automatique des règles de pare-feu Windows.
+
+#### Au niveau serveur
+* Le script doit 
 
 Procédure niveau client
 ------------------------
