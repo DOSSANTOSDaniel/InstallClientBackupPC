@@ -29,22 +29,6 @@ POWERSHELL VERSION: 5.1
 
 ####   fonctions    ###
 ############################################
-function appuyez
-{
-	Write-Host "`n°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°" -f Cyan
-    write-Host "[Veuillez appuyer sur entrée pour poursuivre]`n"
-    Read-Host
-}
-
-function erreur
-{
-	Write-Host "##########################" -f Red -b black
-    Write-Host "##   Erreur de syntax   ##" -f Red -b black
-    Write-Host "## Veuillez recommencer ##" -f Red -b black
-    Write-Host "##########################" -f Red -b black
-    sleep 3
-}
-
 function message 
 {
   Write-Host " " 
@@ -53,9 +37,8 @@ function message
   Write-Host " "
 }
 
-### Début du script ###
-
-### message d'accueil  ###
+##### Début du script #####
+## message d'accueil  ##
 write-host ""
 write-host "-----------------------------------------"
 write-host "*                                       *"
@@ -94,10 +77,10 @@ new-netfirewallrule -name "LogicBackup" -displayname "LogicBackup port 873" -pro
 
 # Informations sur le poste client
 message "Récupération des informations utiles concernant le poste client"
-get-wmiobject Win32_computersystem
+get-wmiobject Win32_computersystem >> poste_$env:userdomain.txt
 
 message "Nom Netbios"
-$env:userdomain
+$env:userdomain >> poste_$env:userdomain.txt
 
 message "Configuration Réseau"
-Get-NetIPConfiguration
+Get-NetIPConfiguration >> poste_$env:userdomain.txt
