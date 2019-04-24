@@ -25,7 +25,6 @@ Faisabilité et solutions
 * Activation de l'exécution de scripts sur le poste client:
 <p> `set-executionpolicy -executionpolicy unrestricted -Force` </p>
 
-```sh
-#!/bin/bash
-echo "toto"
+```powershell
+write-host "toto"
 ```
