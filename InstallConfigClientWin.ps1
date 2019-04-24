@@ -22,10 +22,10 @@ POWERSHELL VERSION: 5.1
 ### Fonctions ###
 function message ($1)
 {
+  Write-Host " "
   Write-Host " " 
   Write-Host "$1"
   Write-Host "---------------------------------------------------------------------------------" -f green -b black
-  Write-Host " "
 }
 
 ### Début du code ###
@@ -41,25 +41,25 @@ write-host ""
 Start-Sleep 2
 
 # Dossier principale
-mkdir $env:USERPROFILE\atout
+mkdir $env:USERPROFILE\Atout
 
 message "Téléchargement du client Windows pour BackupPC en cours"
-Invoke-WebRequest -Uri https://www.logicbox.fr/download/DesktopClient_LogicBackup_1.0.0.1_installer.exe -OutFile $env:USERPROFILE\atout\DesktopClient_LogicBackup_1.0.0.1_installer.exe
+Invoke-WebRequest -Uri https://www.logicbox.fr/download/DesktopClient_LogicBackup_1.0.0.1_installer.exe -OutFile $env:USERPROFILE\Atout\DesktopClient_LogicBackup_1.0.0.1_installer.exe
 Clear-Host
 
 # "/S" pour une installation non graphique
 message "Installation du client en cours"
-Start-Process $env:USERPROFILE\atout\DesktopClient_LogicBackup_1.0.0.1_installer.exe "/S"
+Start-Process $env:USERPROFILE\Atout\DesktopClient_LogicBackup_1.0.0.1_installer.exe "/S"
 Clear-Host
 
 # Configuration du firewall de Windows
 message "Ouverture dur port TCP 873 en trafic entrant en cours"
-new-netfirewallrule -name "LogicBackup" -displayname "LogicBackup port 873" -profile domain,public,private -enabled true -protocol TCP -localport 873 -Action allow
+new-netfirewallrule -name "BackupPC" -displayname "BackupPC port 873" -profile domain,public,private -enabled true -protocol TCP -localport 873 -Action allow
 Start-Sleep 6
 Clear-Host
 
 # Informations sur le poste client
-$chemin="$env:USERPROFILE\atout\poste_$env:userdomain.txt"
+$chemin="$env:USERPROFILE\Atout\poste_$env:userdomain.txt"
 message "Récupération des informations utiles concernant le poste client en cours"
 message "Informations poste client $env:userdomain" *>> $chemin
 get-wmiobject Win32_computersystem >> $chemin
@@ -67,8 +67,10 @@ message "Nom Netbios" *>> $chemin
 $env:userdomain >> $chemin
 message "Configuration Réseau" *>> $chemin
 Get-NetIPConfiguration >> $chemin
-Start-Sleep 3
-Clear-Host
+message "Adresses MAC" *>> $chemin
+get-wmiobject win32_networkadapterconfiguration | select description, macaddress >> $chemin
+
+Remove-Item $env:USERPROFILE\Atout\DesktopClient_LogicBackup_1.0.0.1_installer.exe
 
 message "Les informations ont été enregistrées dans le fichier : $chemin"
 write-host ""
