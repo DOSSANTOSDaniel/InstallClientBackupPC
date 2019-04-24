@@ -48,7 +48,7 @@ write-host "* SCRIPT << BackupPC client install >> *"
 write-host "*                                       *"
 write-host "-----------------------------------------" 
 write-host ""
-sleep 2
+Start-Sleep 2
 
 # Activation de l'exécution de scripts sur l'ordinateur
 message "Activation de l'éxécution de scripts"
