@@ -1,28 +1,32 @@
 Automatisation de la configuration de BackupPC
 ==============================================
-*InstallConfigBackupPC:*
-Plusieurs scripts permettant la configuration d'un client Windows, MacOSX ou GNU/Linux et d'un serveur sous GNU/Linux.
+*./InstallConfigBackupPC:*
 
 Objectif
 --------
-Création d’un script qui installe le client BackupPC sur un poste Windows et d’un autre script qui automatise la configuration du serveur BackupPC.
+Création d’un script qui installe le client BackupPC sur un poste Windows et d’un autre script qui automatise la configuration du serveur BackupPC par rapport au poste client.
 
 Le besoin
 ---------
-* Le script doit être en bat et Powershell.
-* Le script doit être exécutable avec tous les droits.
+##### Au niveau client
+* Le script doit être en bat ou Powershell.
 * Installation automatique du client BackupPC.
-* Script compatible avec toutes les versions de Windows.
-* Configuration automatique du client BackupPC.
-* Affichage à la fin de la procédure d’un fichier de logs.
+* Script compatible avec Windows 7, 8 et 10.
+* Affichage à la fin de la procédure d’un fichier d'information pour faciliter la configuration du serveur.
 * Affichage du nom netbios du poste.
 * Configuration automatique des règles de pare-feu Windows.
-* Ouverture automatique du navigateur sur la page web de configuration de BackupPC pour finaliser la configuration si besoin.
 
-Faisabilité et solutions
+Procédure niveau client
 ------------------------
-
-* Activation de l'exécution de scripts sur le poste client:
+1. Activation de l'exécution de scripts sur le poste client:
 ```powershell
 set-executionpolicy -executionpolicy unrestricted -Force
 ```
+
+Procédure niveau serveur
+------------------------
+1. 
+
+Reste à faire
+-------------
+* Ouverture automatique du navigateur sur la page web de configuration de BackupPC pour finaliser la configuration si besoin.
