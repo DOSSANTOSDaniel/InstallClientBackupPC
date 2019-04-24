@@ -1,7 +1,7 @@
 Automatisation de la configuration de BackupPC
 ==============================================
-> InstallConfigBackupPC:
-> Plusieurs scripts permettant la configuration d'un client Windows, MacOSX ou GNU/Linux et d'un serveur sous GNU/Linux.
+*InstallConfigBackupPC:*
+*Plusieurs scripts permettant la configuration d'un client Windows, MacOSX ou GNU/Linux et d'un serveur sous GNU/Linux.*
 Objectif
 --------
 Création d’un script qui installe le client BackupPC sur un poste Windows et d’un autre script qui automatise la configuration du serveur BackupPC.
@@ -21,5 +21,5 @@ Le besoin
 Faisabilité et solutions
 ------------------------
 
-* Activation de l'exécution de scripts sur l'ordinateur:
+* Activation de l'exécution de scripts sur le poste client:
 set-executionpolicy -executionpolicy unrestricted -Force
