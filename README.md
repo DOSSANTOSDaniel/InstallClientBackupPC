@@ -22,5 +22,5 @@ Le besoin
 Faisabilité et solutions
 ------------------------
 
-* Activation de l'exécution de scripts sur le poste client:
+* Activation de l'exécution de scripts sur le poste client:*
 `set-executionpolicy -executionpolicy unrestricted -Force`
