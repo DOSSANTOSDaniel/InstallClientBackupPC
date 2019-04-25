@@ -78,3 +78,5 @@ write-host "-----------------------------------------"
 write-host "*             Fin du script !           *"
 write-host "-----------------------------------------" 
 write-host ""
+
+invoke-item $env:USERPROFILE\Atout
