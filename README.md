@@ -21,9 +21,19 @@ Le besoin
 
 Procédure niveau client
 ------------------------
-1. Activation de l'exécution de scripts sur le poste client:
+1. Coller le script dans "C:\WINDOWS\system32"
+2. Executer Powershell en tant qu'administrateur
+3. Activation de l'autorisation d'exécuter des scripts sur le poste client:
 ```powershell
 set-executionpolicy -executionpolicy unrestricted -Force
+```
+4. Executer le script:
+```powershell
+.\InstallConfigClientWin.ps1
+```
+5. Restreindre l'autorisation d'exécuter des scripts sur le poste client:
+```powershell
+set-executionpolicy -executionpolicy restricted -Force
 ```
 
 Procédure niveau serveur
