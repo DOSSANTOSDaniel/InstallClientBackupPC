@@ -34,7 +34,8 @@ set-executionpolicy -executionpolicy unrestricted -Force
 ```powershell
 .\InstallConfigClientWin.ps1
 ```
-5. Restreindre l'autorisation d'exécuter des scripts sur le poste client:
+5. Copier et coller le fichier d'information client dans une clé USB.
+6. Restreindre l'autorisation d'exécuter des scripts sur le poste client:
 ```powershell
 set-executionpolicy -executionpolicy restricted -Force
 ```
