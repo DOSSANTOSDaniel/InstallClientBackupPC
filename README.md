@@ -17,7 +17,10 @@ Le besoin
 * Configuration automatique des règles de pare-feu Windows.
 
 #### Au niveau serveur
-* Le script doit 
+* Le script doit pouvoir intégrer un nouveau utilisateur.
+* Ajouter les chemins à sauvegarder.
+* Ajouter les données de planning de sauvegarde.
+* Choisir le mode de sauvegarde.
 
 Procédure niveau client
 ------------------------
