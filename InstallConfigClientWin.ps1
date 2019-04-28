@@ -64,7 +64,7 @@ message "Récupération des informations utiles concernant le poste client en co
 message "Informations poste client $env:userdomain" *>> $chemin
 get-wmiobject Win32_computersystem >> $chemin
 message "Nom Netbios" *>> $chemin
-$env:userdomain >> $chemin
+$env:userdomain.tolower() >> $chemin
 message "Configuration Réseau" *>> $chemin
 Get-NetIPConfiguration >> $chemin
 message "Adresses MAC" *>> $chemin
