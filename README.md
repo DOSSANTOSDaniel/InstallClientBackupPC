@@ -1,4 +1,4 @@
-Automatisation de la configuration de BackupPC
+Automatisation de l'installation de l'agent BackupPC
 ==============================================
 *./InstallConfigBackupPC:*
 
@@ -9,10 +9,8 @@ Création d’un script qui installe le client BackupPC sur un poste Windows.
 Le besoin
 ---------
 #### Au niveau client
-* Le script doit être en bat ou Powershell.
 * Installation automatique du client BackupPC.
 * Script compatible avec Windows 7, 8 et 10.
-* Affichage à la fin de la procédure d’un fichier d'information pour faciliter la configuration du serveur.
 * Affichage du nom netbios du poste.
 * Configuration automatique des règles de pare-feu Windows.
 
@@ -31,8 +29,7 @@ set-executionpolicy -executionpolicy unrestricted -Force
 ```powershell
 .\InstallConfigClientWin.ps1
 ```
-5. Copier et coller le fichier d'information client dans une clé USB.
-6. Restreindre l'autorisation d'exécuter des scripts sur le poste client:
+5. Restreindre l'autorisation d'exécuter des scripts sur le poste client:
 ```powershell
 set-executionpolicy -executionpolicy restricted -Force
 ```
