@@ -4,7 +4,7 @@ Automatisation de la configuration de BackupPC
 
 Objectif
 --------
-Création d’un script qui installe le client BackupPC sur un poste Windows et d’un autre script qui automatise la configuration du serveur BackupPC par rapport au poste client.
+Création d’un script qui installe le client BackupPC sur un poste Windows.
 
 Le besoin
 ---------
@@ -15,12 +15,6 @@ Le besoin
 * Affichage à la fin de la procédure d’un fichier d'information pour faciliter la configuration du serveur.
 * Affichage du nom netbios du poste.
 * Configuration automatique des règles de pare-feu Windows.
-
-#### Au niveau serveur
-* Le script doit pouvoir intégrer un nouveau utilisateur.
-* Ajouter les chemins à sauvegarder.
-* Ajouter les données de planning de sauvegarde.
-* Choisir le mode de sauvegarde.
 
 Procédure niveau client
 ------------------------
@@ -42,16 +36,9 @@ set-executionpolicy -executionpolicy unrestricted -Force
 ```powershell
 set-executionpolicy -executionpolicy restricted -Force
 ```
-
-Procédure niveau serveur
-------------------------
-1. 
-
 Reste à faire
 -------------
 #### Au niveau client
 * Ouverture automatique du navigateur sur la page web de configuration de BackupPC pour finaliser la configuration si besoin.
 * Faire un test si le fichier Atout existe ou pas.
 * Faire un test si la règle de firewall existe déjà.
-
-#### Au niveau serveur
