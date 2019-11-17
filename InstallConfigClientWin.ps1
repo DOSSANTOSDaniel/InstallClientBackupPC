@@ -67,8 +67,6 @@ message "Nom Netbios" *>> $chemin
 $env:userdomain.tolower() >> $chemin
 message "Configuration Réseau" *>> $chemin
 Get-NetIPConfiguration >> $chemin
-message "Adresses MAC" *>> $chemin
-get-wmiobject win32_networkadapterconfiguration | Select-Object description, macaddress >> $chemin
 
 Remove-Item $env:USERPROFILE\Atout\DesktopClient_LogicBackup_1.0.0.1_installer.exe
 
