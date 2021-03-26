@@ -37,5 +37,4 @@ Reste à faire
 -------------
 #### Au niveau client
 * Ouverture automatique du navigateur sur la page web de configuration de BackupPC pour finaliser la configuration si besoin.
-* Faire un test si le fichier Atout existe ou pas.
 * Faire un test si la règle de firewall existe déjà.
